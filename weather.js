@@ -7,7 +7,7 @@ async function getWeather() {
 }
 
 async function getTemps(response) {
-  const res = await fetch('http://api.openweathermap.org/data/2.5/weather?q=' + response.city + ',' + response.region_code + ',' + response.country_code + '&units=imperial&appid=a3d052fd96a1f477aeaab4cbd25522c8')
+  const res = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + response.city + ',' + response.region_code + ',' + response.country_code + '&units=imperial&appid=a3d052fd96a1f477aeaab4cbd25522c8')
     .then(res => res.json())
     .then(res => showCondition(res));
 }
@@ -18,7 +18,7 @@ function showCity(response) {
 }
 
 function showCondition(res) {
-  document.getElementById("icon").src = "http://openweathermap.org/img/w/" + res.weather[0].icon + ".png";
+  document.getElementById("icon").src = "https://openweathermap.org/img/w/" + res.weather[0].icon + ".png";
   document.getElementById("cond").innerText = res.weather[0].description;
   showTemps(res);
 }
