@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+      <div class="container-fluid row justify-content-end">
+        <a id="greeting" class="navbar-brand col-10 text-center">Welcome Home</a>
+        <form class="d-flex col-1">
+          <button class="btn btn-outline-warning" type="button" style="display: none;">Settings</button>
+        </form>
+      </div>
+    </nav>
+    <br>
+    <div class="container-fluid row mt-5 justify-content-center">
+      <div class="col text-center">
+        <h1 id="time" class="font-color-dark">--:--:-- --</h1>
+      </div>
+    </div>
+    <div class="container-fluid row mt-2 justify-content-center">
+      <div class="col text-center">
+        <h3 id="date" class="font-color-dark" onload="getDate();"></h3>
+      </div>
+    </div>
+    <br>
+    <div class="container-fluid row justify-content-center mt-5" onload="getWeather();">
+      <div class="col-4 text-center font-color-dark">
+        <h1 id="temp">--ºF</h1>
+        <h3 id="city" class="text-capitalize">null</h3>
+      </div>
+      <div class="col-6 text-center font-color-dark">
+        <img id="icon" src="http://openweathermap.org/img/w/01d.png">
+        <h4 id="cond" class="text-capitalize">null</h4>
+        <div class="container-fluid row justify-content-center text-center">
+          <h4 id="high" class="col-3">H: --º</h4>
+          <h4 id="low" class="col-3">L: --º</h4>
+        </div>
+      </div>
+    </div>
+    <script src="weather.js"></script>
+    <script src="greeting.js"></script>
+    <script src="datetime.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

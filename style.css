@@ -1,0 +1,18 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(at bottom right, white 2%, royalblue 98%) fixed;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+#greeting {
+  font-size: 1.5em;
+}
+
+#icon {
+  height: 75px;
+  width: 75px;
+}
