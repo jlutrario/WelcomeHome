@@ -13,4 +13,10 @@ else {
   greeting = "Good Evening"
 }
 
-document.getElementById("greeting").innerHTML = greeting + "!";
+var name = localStorage.getItem('name');
+
+if (name == null || name == 0) {
+  document.getElementById("greeting").innerHTML = greeting + "!";
+} else {
+  document.getElementById("greeting").innerHTML = greeting + ", " + name + "!";
+}
