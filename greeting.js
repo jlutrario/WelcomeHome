@@ -15,7 +15,7 @@ else {
 
 var name = localStorage.getItem('name');
 
-if (name == null || name == 0) {
+if (name == 'null' || name == 0) {
   document.getElementById("greeting").innerHTML = greeting + "!";
 } else {
   document.getElementById("greeting").innerHTML = greeting + ", " + name + "!";
